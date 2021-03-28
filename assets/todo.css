@@ -82,6 +82,11 @@
     margin-right: 10px;
 }
 
+.red-alert {
+    display:none;
+    color: red;
+}
+
 
 
 
