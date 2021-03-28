@@ -25,7 +25,7 @@ nav {
     transform: translateX(-50%);
 }
 
-ul {
+nav ul {
     display: inline-flex;
     list-style: none;
     justify-content: center;
@@ -33,7 +33,7 @@ ul {
     overflow: hidden;
 }
 
-ul li a {
+nav ul li a {
     height: 60px;
     padding: 30px;
     line-height: 60px;
@@ -45,7 +45,7 @@ ul li a {
     transition:.3s ease background-color;
 }
 
-ul li a:hover
+nav ul li a:hover
 {
     background-color:#333 ;
     color:white;
