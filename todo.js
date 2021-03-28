@@ -23,7 +23,7 @@ const createNewTaskHandler = () => {
         createControlDiv.appendChild(createCheckingDiv).classList.add("check-as-done");
         createControlDiv.appendChild(createRemovingDiv).classList.add("remove-task");
         createRemovingDiv.addEventListener("click", () => removeTask(uniqueId));
-        createCheckingDiv.addEventListener("click", checkTaskAsDone);
+        createCheckingDiv.addEventListener("click", () => checkTaskAsDone(uniqueId));
         createP.innerText = taskNameInputValue;
         createLi.appendChild(createP).classList.add("task-list-item-name");
         createLi.appendChild(createControlDiv).classList.add("task-list-item-control");
@@ -34,8 +34,11 @@ const createNewTaskHandler = () => {
     }
 }
 
-const checkTaskAsDone = () => {
-    
+const checkTaskAsDone = (id) => {
+    // const taskToMarkAsDone = document.querySelector("#" + id + "> i");
+    const taskToMarkAsDone = document.getElementById(id);
+    taskToMarkAsDone.classList.toggle("taskDone");
+
 } 
 
 const removeTask = (id) => {
