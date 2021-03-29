@@ -14,14 +14,14 @@
         <ul>
             <li><a href="kalkulator.html" class="active">Kalkulator pola powierzchni</a></li>
             <li><a href="todo.html">TODO Lista</a></li>
-            <li><a href="#">Jakieś guwno</a></li>
+            <li><a href="gunwo.html">Jakieś guwno</a></li>
         </ul>
     </nav>
     <a href="index.html" class="logo"></a>
     <section class="calculator">
         <div class="form">
-            <input type="number" name="width" id="width" class="form-input" placeholder="Szerokość figury" min="1">
-            <input type="number" name="height" id="height" class="form-input" placeholder="Wysokość figury" min="1">
+            <input type="number" name="width" id="width" class="form-input" placeholder="Szerokość figury" min="1" oninput="this.value = Math.abs(this.value)">
+            <input type="number" name="height" id="height" class="form-input" placeholder="Wysokość figury" min="1" oninput="this.value = Math.abs(this.value)">
             <button class="btn" id="calculate">Oblicz</button>
         </div>
         <div>
