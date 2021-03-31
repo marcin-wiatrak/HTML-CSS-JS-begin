@@ -37,15 +37,15 @@ const renderView = () => {
 
 
 // SKRÓCONA WERSJA!!!!!!!
-const taskOperation = (operation, id) => {
+const taskOperation = (operation, id) => { // pobieramy 2 argumenty przekazane z onClicków z lini 25 i 28.
     const element = taskListArray.find(item => item.taskId == id);
     const index = taskListArray.indexOf(element);
-    if(operation == "delete") {
-        taskListArray.splice(index, 1);
-    } else if(operation == "checkAsDone") {
-        taskListArray[index].taskDone = !taskListArray[index].taskDone;
-    }
-    renderView();
+    if(operation == "delete") { // W zależności od pierwszego argumentu (delete czy checkAsDone z lini 25/28)..
+        taskListArray.splice(index, 1); // USUWAMY
+    } else if(operation == "checkAsDone") { // lub
+        taskListArray[index].taskDone = !taskListArray[index].taskDone; // Zmieniamy status zadania.
+    } // CO ROBI TEN ZAPIS WYŻEJ? Znajduje wartość w tablicy (false lub true i dokonuje negacji - True -> False / False -> True)
+    renderView(); // renderuje widok na nowo
 }
 // SKRÓCONA WERSJA!!!!!!!
 
